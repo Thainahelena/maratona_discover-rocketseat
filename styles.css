@@ -118,9 +118,11 @@ header{
 /* ---------------- Table ---------------- */
 
 #data-table{
+    display: block;
     width: 100%;
     border-spacing: 0 0.5rem;
     color: #003F42;
+    overflow-x: auto;
 }
 
 table thead tr th:first-child,
