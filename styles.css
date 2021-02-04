@@ -50,10 +50,12 @@ a{
     color:#003F42;
     text-decoration: none;
     opacity: 0.8;
+    margin-top: 25px;
 }
 
 a:hover{
     color:#001122;
+    opacity: 1;
 }
 
 button{
