@@ -22,8 +22,6 @@
     border-width: 0;
 }
 
-
-
 .container{
     width: min(90vw, 800px);
     margin: auto;
@@ -80,6 +78,9 @@ header{
 .card h3{
     font-weight: normal;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .card.total{
