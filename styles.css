@@ -27,6 +27,10 @@
     margin: auto;
 }
 
+html {
+    font-size: 93.75%; /*----- 15px ------*/
+}
+
 body{
     background: #dbdedf;
     font-family: 'Poppins', sans-serif;
@@ -163,6 +167,7 @@ table tbody td.income{
 table tbody td.expense{
     color: #9b1414;
 }
+
 /* ---------------- Footer ---------------- */
 
 footer{
