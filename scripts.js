@@ -7,3 +7,17 @@ const Modal = {
     document.querySelector('.modal-overlay').classList.remove('active');
     }
 }
+
+const Transaction = {
+    incomes(){
+
+    },
+
+    expenses(){
+
+    },
+
+    total(){
+        
+    }
+}
