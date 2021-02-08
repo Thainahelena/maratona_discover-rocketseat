@@ -8,6 +8,27 @@ const Modal = {
     }
 }
 
+const transactions = [
+    {
+        id: 1,
+        description: 'Luz',
+        amount: -50000,
+        date: '23/01/2021'
+    }, 
+    {
+        id: 2,
+        description: 'Website',
+        amount: 500000,
+        date: '20/01/2021'
+    }, 
+    {
+        id: 3,
+        description: 'Internet',
+        amount: -20000,
+        date: '20/01/2021'
+    }
+]
+
 const Transaction = {
     incomes(){
 
@@ -18,6 +39,6 @@ const Transaction = {
     },
 
     total(){
-        
+
     }
 }
