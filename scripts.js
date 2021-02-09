@@ -144,10 +144,3 @@ const App = {
 }
 
 App.init()
-
-/*DOM.Transaction.add({
-    id: 3,
-    description: "App",
-    amount: 200,
-    date: '23/01/2021'
-})*/
