@@ -44,7 +44,6 @@ const Transaction = {
 }
 
 const DOM = {
-
     transactionsContainer: document.querySelector('#data-table tbody'),
 
     addTransaction(transactions, index){
@@ -68,7 +67,19 @@ const DOM = {
         </td>
         `
         return html
-    }
+    },
+
+    updateBalance() {
+        document
+            .getElementById('incomeDisplay')
+            .innerHTML= "Soma das Entradas"
+        document
+            .getElementById('expenseDisplay')
+            .innerHTML= "Soma das Saídas"
+        document
+            .getElementById('totalDisplay')
+            .innerHTML= "Soma Total"
+        }
 }
 
 
@@ -92,3 +103,5 @@ const Utils = {
 transactions.forEach(function(transactions){
     DOM.addTransaction(transactions)
 })
+
+DOM.updateBalance();
