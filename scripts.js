@@ -30,9 +30,22 @@ const transactions = [
 ]
 
 const Transaction = {
+    all: transactions,
+
+    add(transactions){
+        Transaction.all.push(transactions)
+        console.log(Transaction.all)
+    }, 
+
+    remove(index){
+        Transaction.all.splice(index, 1)
+
+        App.reload()
+    },
+
     incomes(){
         let income = 0
-        transactions.forEach(transactions => {
+        Transaction.all.forEach(transactions => {
             if( transactions.amount > 0){
                 income += transactions.amount; 
             }
@@ -42,7 +55,7 @@ const Transaction = {
 
     expenses(){
         let expense = 0
-        transactions.forEach(transactions => {
+        Transaction.all.forEach(transactions => {
             if( transactions.amount < 0){
                 expense += transactions.amount;
             }
@@ -91,9 +104,12 @@ const DOM = {
         document
             .getElementById('totalDisplay')
             .innerHTML= Utils.formatCurrency(Transaction.total())
-        }
-}
+    },
 
+    clearTransactions() {
+        DOM.transactionsContainer.innerHTML = ""
+    }
+}
 
 const Utils = {
     formatCurrency(value){
@@ -112,8 +128,26 @@ const Utils = {
     }
 }
 
-transactions.forEach(function(transactions){
-    DOM.addTransaction(transactions)
-})
+const App = {
+    init() {
+        Transaction.all.forEach(transactions => {
+            DOM.addTransaction(transactions)
+        })
 
-DOM.updateBalance();
+        DOM.updateBalance();
+    },
+
+    reload() {
+        DOM.clearTransactions()
+        App.init()
+    }
+}
+
+App.init()
+
+/*DOM.Transaction.add({
+    id: 3,
+    description: "App",
+    amount: 200,
+    date: '23/01/2021'
+})*/
