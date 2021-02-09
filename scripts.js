@@ -55,16 +55,37 @@ const DOM = {
     },
 
     innerHTMLTransaction(transactions){
-        
+        const CSSclass = transactions.amount > 0 ? "income" : "expense"
+
+        const amount = Utils.formatCurrency(transactions.amount)
+
         const html = `
         <td class="description">${transactions.description}</td>
-        <td class="expense">${transactions.amount}</td>
+        <td class="${CSSclass}">${amount}</td>
         <td class="date">${transactions.date}</td>
         <td>
             <img src="./assets/minus.svg" alt="Remover Transação">
         </td>
         `
         return html
+    }
+}
+
+
+const Utils = {
+    formatCurrency(value){
+        const signal = Number(value) < 0 ? "-" : ""
+        
+        value = String(value).replace(/\D/g, "")
+
+        value = Number(value / 100)
+        
+        value = value.toLocaleString("pt-BR", {
+            style: "currency", 
+            currency: "BRL"
+        })
+
+        return signal + value
     }
 }
 
