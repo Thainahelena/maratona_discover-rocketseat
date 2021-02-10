@@ -125,6 +125,12 @@ const Utils = {
         })
 
         return signal + value
+    },
+
+    formatAmount(value){
+       value = Number(value) 
+
+       return value
     }
 }
 
