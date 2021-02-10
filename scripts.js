@@ -167,13 +167,27 @@ const Form = {
         let{description, amount, date} = Form.getValues()
         amount = Utils.formatAmount(value)
         date = Utils.formatDate(value)
+
+        return {
+            description,
+            amount,
+            date
+        }
+    },
+
+    saveTransaction(){
+        Transaction.add(transactions) 
     },
 
     submit(event){
         event.preventDefault()
 
         try{
-            // Form.validadteFields()
+            Form.validadteFields()
+            const transactions = Form.formatValues()
+
+            Form.saveTransaction()
+
         }catch (error) {
             alert(error.message)
         }
