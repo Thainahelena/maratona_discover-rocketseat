@@ -125,7 +125,7 @@ const Utils = {
     },
 
     formatAmount(value){
-       value = Number(value) 
+       value = Number(value) * 100
 
        return value
     },
