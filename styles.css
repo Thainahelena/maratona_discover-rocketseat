@@ -108,8 +108,8 @@ header {
 
 #logo {
     color: #fff;
-    font-weight: 450;
-    font-size:28px ;
+    align-content: center;
+    padding-left: 1rem;
 }
 
 /* ---------------- Balance ---------------- */
