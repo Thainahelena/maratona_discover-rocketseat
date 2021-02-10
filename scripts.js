@@ -152,11 +152,10 @@ const Form = {
         }
     },
 
-    validadteFields(){
+    validateFields(){
         const{description, amount, date} = Form.getValues()
 
-        if(
-            description.trim() === "" ||
+        if( description.trim() === "" ||
             amount.trim() === "" ||
             date.trim() === "") {
                 throw new Error("Por favor, preencha todos os campos!")
@@ -165,8 +164,8 @@ const Form = {
 
     formatValues() {
         let{description, amount, date} = Form.getValues()
-        amount = Utils.formatAmount(value)
-        date = Utils.formatDate(value)
+        amount = Utils.formatAmount(amount)
+        date = Utils.formatDate(date)
 
         return {
             description,
@@ -179,14 +178,22 @@ const Form = {
         Transaction.add(transactions) 
     },
 
+    clearFields(){
+        Form.description.value = ""
+        Form.amount.value = ""
+        Form.date.value = ""
+    },
+
     submit(event){
         event.preventDefault()
 
         try{
-            Form.validadteFields()
+            Form.validateFields()
             const transactions = Form.formatValues()
 
             Form.saveTransaction()
+
+            Form.clearFields()
 
         }catch (error) {
             alert(error.message)
