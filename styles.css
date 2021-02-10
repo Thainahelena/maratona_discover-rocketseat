@@ -215,9 +215,9 @@ table tbody td.expense{
 
 footer{
     text-align: center;
-    padding: 4rem 0 5rem;
-    color: var(--dark-blue);
-    opacity: 0.4;
+    padding: 10rem 0 5rem;
+    color: #80a4b1;
+    opacity: 1;
 }
 
 /* ---------------- Modal ---------------- */
@@ -244,6 +244,8 @@ footer{
     background: #f0f2f5;
     padding: 2.4rem;
     border-radius: 0.25rem;
+    position: relative;
+    z-index: 3;
 }
 
 /* ---------------- Form ---------------- */
