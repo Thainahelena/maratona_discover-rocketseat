@@ -112,6 +112,10 @@ header {
     padding-left: 1rem;
 }
 
+#logo img {
+    width: 18%;
+}
+
 /* ---------------- Balance ---------------- */
 
 #balance {
@@ -216,7 +220,7 @@ table tbody td.expense{
 footer{
     text-align: center;
     padding: 10rem 0 5rem;
-    color: #80a4b1;
+    color: #72919b;
     opacity: 1;
 }
 
@@ -295,5 +299,11 @@ input{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #logo img{
+        width: 60%;
     }
 }
