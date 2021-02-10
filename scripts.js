@@ -142,21 +142,27 @@ const Form = {
     },
 
     validadteFields(){
-        const ( description, amount, date ) = Form.getValues()
+        const{description, amount, date} = Form.getValues()
 
         if(
             description.trim() === "" ||
             amount.trim() === "" ||
             date.trim() === "") {
-                throw new Error("Por favor, preencha todos os erros")
+                throw new Error("Por favor, preencha todos os campos!")
             }
+    },
+
+    formatValues() {
+        let{description, amount, date} = Form.getValues()
+        amount = Utils.formatAmount(value)
+        date = Utils.formatDate(value)
     },
 
     submit(event){
         event.preventDefault()
 
         try{
-
+            Form.validadteFields()
         }catch (error) {
             alert(error.message)
         }
