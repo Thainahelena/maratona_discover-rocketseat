@@ -187,6 +187,7 @@ const Form = {
             Form.clearFields()
             Modal.close()
             console.log(transactions)
+            App.reload()
         }catch (error) {
             alert(error.message)
         }
