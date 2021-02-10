@@ -131,6 +131,11 @@ const Utils = {
        value = Number(value) 
 
        return value
+    },
+
+    formatDate(date){
+        const splittedDate = date.split("-")
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
     }
 }
 
@@ -168,7 +173,7 @@ const Form = {
         event.preventDefault()
 
         try{
-            Form.validadteFields()
+            // Form.validadteFields()
         }catch (error) {
             alert(error.message)
         }
