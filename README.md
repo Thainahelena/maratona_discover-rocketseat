@@ -6,9 +6,9 @@
 <img src="https://i.imgur.com/SMMvRCm.png">
 </h2>
 
-<h2 align="center">
+<p align="center">
     <a href="https://www.facebook.com/rocketseat/" target="_blank"><img class="link" src="https://i.imgur.com/s9wDAAI.png?1" width="30rem"></a> <a href="https://www.youtube.com/rocketseat" target="_blank"><img class="link" src="https://i.imgur.com/zG40AZC.png?1" width="30rem"></a> <a href="https://twitter.com/rocketseat?fbclid=IwAR21VyJKLkrnNBtKHOflmYmmD4SnGXAcRyiozh7tLuAzQRDMKKC0pvECwos" target="_blank"><img class="link" src="https://i.imgur.com/0Xfla8g.png?1" width="30rem"></a> <a href="https://rocketseat.com.br/" target="_blank"><img class="link" src="https://i.imgur.com/skUash9.png?1" width="30rem"></a>
-</h2>
+</p>
 
 ## 📚 Sobre
 
